@@ -50,9 +50,12 @@ namespace ProjPrac.Controllers
         // GET: Enrollment/Create
         public IActionResult Create()
         {
-            ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName");
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID");
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID");
+            ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FullName");
+            ViewData["GameID"] = new SelectList(_context.Games, "ID", "Gym");
+            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Breakfast");
+
+             ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom");
+             ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer");
             return View();
         }
 
@@ -71,8 +74,14 @@ namespace ProjPrac.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+            ViewData["GameID"] = new SelectList(_context.Games, "ID", "Gym", enrollment.GameID);
+            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Breakfast", enrollment.MealID);
+
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom", enrollment.GameID);
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer", enrollment.GameID);
+
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Lunch", enrollment.MealID);
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Snack", enrollment.MealID);
             return View(enrollment);
         }
 
@@ -89,9 +98,26 @@ namespace ProjPrac.Controllers
             {
                 return NotFound();
             }
-            ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+           // ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
+           // ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
+           // ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+
+
+                     ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
+                     ViewData["GameID"] = new SelectList(_context.Games, "ID", "Gym", enrollment.GameID);
+                     ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Breakfast", enrollment.MealID);
+
+                    ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom", enrollment.GameID);
+                    ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer", enrollment.GameID);
+
+                    ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Lunch", enrollment.MealID);
+                    ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Snack", enrollment.MealID);
+
+
+
+
+
+
             return View(enrollment);
         }
 
@@ -127,9 +153,21 @@ namespace ProjPrac.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+            // ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
+            // ViewData["GameID"] = new SelectList(_context.Games, "ID", "ID", enrollment.GameID);
+            // ViewData["MealID"] = new SelectList(_context.Meals, "ID", "ID", enrollment.MealID);
+
+                ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "Gym", enrollment.GameID);
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Breakfast", enrollment.MealID);
+
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom", enrollment.GameID);
+                ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer", enrollment.GameID);
+
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Lunch", enrollment.MealID);
+                ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Snack", enrollment.MealID);
+
+
             return View(enrollment);
         }
 

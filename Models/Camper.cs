@@ -31,7 +31,7 @@ namespace ProjPrac.Models
         {
             get
             {
-                return FirstMidName + LastName;
+                return FirstMidName +" " + LastName;
             }
             
         }
