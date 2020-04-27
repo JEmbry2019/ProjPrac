@@ -33,6 +33,7 @@ namespace ProjPrac.Models
             {
                 return FirstMidName + LastName;
             }
+            
         }
 
         public ICollection<Enrollment> Enrollments { get; set; }
