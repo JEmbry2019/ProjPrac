@@ -13,7 +13,7 @@ namespace ProjPrac.Models
         public Guid CamperID { get; set; }
         public Guid MealID { get; set; }
         public Guid GameID { get; set; }
-        public Grade? Grade { get; set; }
+      public Grade? Grade { get; set; }
         
 
         public Camper Camper { get; set; }
