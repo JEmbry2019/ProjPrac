@@ -51,11 +51,12 @@ namespace ProjPrac.Controllers
         public IActionResult Create()
         {
             ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FullName");
-            ViewData["GameID"] = new SelectList(_context.Games, "ID", "Gym");
-            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Breakfast");
+            ViewData["GameID"] = new SelectList(_context.Games, "ID", "Display");
+          
+            ViewData["MealID"] = new SelectList(_context.Meals, "ID", "FoodDisplay");
 
-             ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom");
-             ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer");
+            // ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom");
+            // ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer");
             return View();
         }
 
@@ -104,14 +105,14 @@ namespace ProjPrac.Controllers
 
 
                      ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FirstMidName", enrollment.CamperID);
-                     ViewData["GameID"] = new SelectList(_context.Games, "ID", "Gym", enrollment.GameID);
-                     ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Breakfast", enrollment.MealID);
+                     ViewData["GameID"] = new SelectList(_context.Games, "ID", "Display", enrollment.GameID);
+                     ViewData["MealID"] = new SelectList(_context.Meals, "ID", "FoodDisplay", enrollment.MealID);
 
-                    ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom", enrollment.GameID);
-                    ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer", enrollment.GameID);
+                   // ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom", enrollment.GameID);
+                   // ViewData["GameID"] = new SelectList(_context.Games, "ID", "Computer", enrollment.GameID);
 
-                    ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Lunch", enrollment.MealID);
-                    ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Snack", enrollment.MealID);
+                   // ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Lunch", enrollment.MealID);
+                   // ViewData["MealID"] = new SelectList(_context.Meals, "ID", "Snack", enrollment.MealID);
 
 
 

@@ -25,6 +25,9 @@ namespace ProjPrac.Models
         public Mid Lunch { get; set; }
         public Food Snack { get; set;}
 
+
+        public string FoodDisplay {get{return $"{Breakfast } {Lunch } {Snack}";}}
+
     }
 
 
