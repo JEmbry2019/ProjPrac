@@ -50,9 +50,9 @@ namespace ProjPrac.Controllers
         // GET: Enrollment/Create
         public IActionResult Create()
         {
+        // Lines 54 -56 adds all 3 selections to Enum view on Create page.
             ViewData["CamperID"] = new SelectList(_context.Campers, "ID", "FullName");
             ViewData["GameID"] = new SelectList(_context.Games, "ID", "Display");
-          
             ViewData["MealID"] = new SelectList(_context.Meals, "ID", "FoodDisplay");
 
             // ViewData["GameID"] = new SelectList(_context.Games, "ID", "RecRoom");
