@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjPrac.Models
 {
@@ -23,6 +24,7 @@ namespace ProjPrac.Models
         public Recreation1 Gym { get; set; }
         public Recreation2 RecRoom { get; set; }
         public Recreation3 Computer { get; set;}
+
 
         public string Display {get{return $"{Gym}, { RecRoom}, and {Computer}";}}
 
